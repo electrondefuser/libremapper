@@ -5,10 +5,10 @@ libremapper (a.k.a Library Remapper) is a library remapping system that prevents
  The memory maps file (`/proc/[pid]/maps`) provides information about the memory regions of a running process, including shared libraries and other dynamically allocated segments. Malicious actors may exploit this information to scan for and target specific libraries or memory regions in an application. **libremapper** seeks to mitigate such risks by remapping these suspicious libraries, making it harder for attackers to locate and identify them. It achieves this by performing manual remapping of libraries during runtime, effectively hiding them from common memory scanning techniques. 
  
  ## Features 
-**Library Remapping**: Safeguards suspicious libraries by remapping them to different addresses. 
-**Obfuscation**: Hides libraries and memory segments from basic scanning attempts.
-**Customizable**: Configurable remapping patterns based on user-defined rules.
-**Lightweight**: Efficient and minimal overhead, suitable for performance-sensitive applications. 
+- **Library Remapping**: Safeguards suspicious libraries by remapping them to different addresses. 
+- **Obfuscation**: Hides libraries and memory segments from basic scanning attempts.
+- **Customizable**: Configurable remapping patterns based on user-defined rules.
+- **Lightweight**: Efficient and minimal overhead, suitable for performance-sensitive applications. 
 
 ## Installation
 To use **libremapper**, you can clone this repository and copy the two header files which are `remapper.h` and `log.h` in the you desired project directory and including them in the target project. Use the function `remap_lib` or `remap_all` to remap the target library.
